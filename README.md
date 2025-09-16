@@ -21,4 +21,20 @@ Repository for the mda-artz project.
 - **Expand sales channels**: Sell on social platforms, marketplaces, or through pop-ups. Shopify’s sales channels let you manage inventory across Facebook, Instagram, TikTok, Google, and more from one dashboard.
 - **Offer competitive shipping options**: Free or inexpensive shipping reduces cart abandonment and increases loyalty. You can bake shipping costs into product pricing if margins allow.
 - **Continuously optimize**: Use Shopify Analytics and tools like Google Analytics to monitor traffic, sales, and customer behavior. A/B test changes, refine marketing campaigns, and improve site usability over time.
-- **Stay ethical and transparent**: Upholding ethical practices—honest pricing, clear communication, and respect for customer data—builds a strong reputation and long-term success.
+- **Stay ethical and transparent**: Upholding
+- 
+## Fixing Critical SEO Issues
+
+Below are actionable steps to address common SEO problems that may affect your Shopify store:
+
+1. **Unique meta tags**: Ensure every page has a unique, keyword‑rich meta title and description.
+2. **Proper heading structure**: Use a single H1 per page and meaningful H2/H3 tags to improve readability and crawlability.
+3. **Descriptive alt text**: Add alt text to all images to improve accessibility and help search engines understand your content.
+4. **Canonical tags**: If you have duplicate content (such as variants on separate URLs), use canonical tags to indicate the preferred URL.
+5. **Improve site performance**: Compress images, minify CSS and JavaScript, and remove unused code to speed up page load times.
+6. **Mobile optimization**: Ensure your theme is responsive so the store looks good on all devices.
+7. **Internal linking**: Link related products and blog posts to guide users and search bots through your site.
+8. **Publish fresh content**: Maintain a blog with articles targeting relevant keywords and answering customer questions.
+9. **Encourage reviews**: Add a review section on product pages and ask customers for feedback to build trust and fresh content.
+10. **Monitor analytics**: Use Shopify Analytics or Google Analytics to track traffic, bounce rates, and conversions; prioritize pages needing improvement.
+ethical practices—honest pricing, clear communication, and respect for customer data—builds a strong reputation and long-term success.
