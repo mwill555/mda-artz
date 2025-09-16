@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /cart
+Disallow: /checkout
+Disallow: /orders
+Disallow: /account
+Disallow: /carts
+Allow: /
+
+Sitemap: https://mdigitalartz.com/sitemap.xml
