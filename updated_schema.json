@@ -1,0 +1,63 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MDigitalArtz",
+    "url": "https://mdigitalartz.com",
+    "logo": "https://mdigitalartz.com/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/mdigitalartz",
+      "https://www.instagram.com/mdigitalartz"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-000-000-0000",
+      "contactType": "Customer Service"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Symbiotic Bio-Armored Poster – 16x20",
+    "image": "https://mdigitalartz.com/images/symbiotic-bio-armored.jpg",
+    "description": "Symbiotic bio-armored heroine print on 16x20 enhanced matte poster featuring a horned demoness in sleek armor.",
+    "sku": "SYM-1620",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://mdigitalartz.com/products/symbiotic-bio-armored-poster-16x20",
+      "priceCurrency": "USD",
+      "price": "29.99",
+      "availability": "https://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Neon Armor Heroine Poster – 16x20",
+    "image": "https://mdigitalartz.com/images/neon-armor-heroine.jpg",
+    "description": "Neon armor heroine print on 16x20 enhanced matte poster featuring a futuristic female warrior in reflective armor.",
+    "sku": "NEON-1620",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://mdigitalartz.com/products/neon-armor-heroine-poster-16x20",
+      "priceCurrency": "USD",
+      "price": "29.99",
+      "availability": "https://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Afro-Anime Heroine Poster – 16x20",
+    "image": "https://mdigitalartz.com/images/afro-anime-heroine.jpg",
+    "description": "Afro-anime heroine print on 16x20 enhanced matte poster featuring a confident futuristic woman with teal armor.",
+    "sku": "AFRO-1620",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://mdigitalartz.com/products/afro-anime-heroine-poster-16x20",
+      "priceCurrency": "USD",
+      "price": "29.99",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+]
