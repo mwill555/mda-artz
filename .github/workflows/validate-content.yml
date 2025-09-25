@@ -1,0 +1,30 @@
+name: Validate SEO and Pins Content
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - "*"
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm install
+      - name: Validate SEO JSON files
+        run: |
+          npx ajv validate -s schemas/seo.schema.json -d build/seo/*.json --strict=false
+      - name: Check banned words
+        run: |
+          if grep -r -E '\\b(pink|rainbow)\\b' build/seo || true; then
+            echo 'Banned color words detected. Remove them or set ALLOW_PASTEL=true.'
+            exit 1
+          fi
