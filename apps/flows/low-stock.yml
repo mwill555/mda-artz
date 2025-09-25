@@ -1,0 +1,10 @@
+flow: "Low Stock → Tag + Alert"
+trigger: "Inventory quantity changed"
+condition: "variant.inventory_quantity <= 5 AND product.tags CONTAINS 'limited'"
+actions:
+  - add_product_tag: "low-stock"
+  - send_email:
+      to: "ops@mdigitalartz.com"
+      subject: "Low Stock: {{product.title}}"
+      body: "Variant {{variant.sku}} at {{variant.inventory_quantity}}"
+# Tags a product as low-stock when limited variants reach ≤5 units, and emails operations
