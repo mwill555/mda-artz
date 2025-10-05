@@ -21,8 +21,8 @@ Repository for the mda-artz project.
 - **Expand sales channels**: Sell on social platforms, marketplaces, or through pop-ups. Shopify’s sales channels let you manage inventory across Facebook, Instagram, TikTok, Google, and more from one dashboard.
 - **Offer competitive shipping options**: Free or inexpensive shipping reduces cart abandonment and increases loyalty. You can bake shipping costs into product pricing if margins allow.
 - **Continuously optimize**: Use Shopify Analytics and tools like Google Analytics to monitor traffic, sales, and customer behavior. A/B test changes, refine marketing campaigns, and improve site usability over time.
-- **Stay ethical and transparent**: Upholding
-- 
+- **Stay ethical and transparent**: Upholding ethical practices—honest pricing, clear communication, and respect for customer data—builds a strong reputation and long-term success.
+
 ## Fixing Critical SEO Issues
 
 Below are actionable steps to address common SEO problems that may affect your Shopify store:
@@ -37,7 +37,7 @@ Below are actionable steps to address common SEO problems that may affect your S
 8. **Publish fresh content**: Maintain a blog with articles targeting relevant keywords and answering customer questions.
 9. **Encourage reviews**: Add a review section on product pages and ask customers for feedback to build trust and fresh content.
 10. **Monitor analytics**: Use Shopify Analytics or Google Analytics to track traffic, bounce rates, and conversions; prioritize pages needing improvement.
-ethical practices—honest pricing, clear communication, and respect for customer data—builds a strong reputation and
+
 ## Design Improvements for Product Listings
 
 To enhance clarity, readability, and visual consistency in your digital art store, implement these improvements:
@@ -53,5 +53,3 @@ To enhance clarity, readability, and visual consistency in your digital art stor
 - **Symbiotic Bio‑Armored Poster – 16×20** (formerly “Dark Cyberpunk Symbiotic Bio‑Armored Art – 16×20 Enhanced Matte | M Digital Artz™”)
 - **Neon Armor Heroine Poster – 16×20** (formerly “Cyberpunk Neon Female Armor Poster – 16×20 Enhanced Matte”)
 - **Afro‑Anime Heroine Poster – 16×20** (formerly “Cyberpunk Afro‑Anime Aesthetic Poster – 16×20 Enhanced Matte”)
- long-term success
- 
