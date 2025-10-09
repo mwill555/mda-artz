@@ -1,0 +1,59 @@
+flow: "Daily About Page Auto Publish"
+trigger: "Scheduled time"
+schedule: "0 9 * * *"
+actions:
+  # Step 1: Retrieve the About page ID and shop ID
+  - send_admin_api_request:
+      query: |
+        query GetIds($q: String!) {
+          shop {
+            id
+            metafield(namespace: "custom", key: "about_page_id") { id value }
+          }
+          pages(first: 1, query: $q) {
+            edges { node { id handle } }
+          }
+        }
+      variables:
+        q: "handle:about"
+  # Step 2: Persist the About page ID to a shop metafield
+  - send_admin_api_request:
+      query: |
+        mutation SetAboutMeta($ownerId: ID!, $val: String!) {
+          metafieldsSet(metafields: [{
+            ownerId: $ownerId,
+            namespace: "custom",
+            key: "about_page_id",
+            type: "single_line_text_field",
+            value: $val
+          }]) {
+            metafields { id key namespace value }
+            userErrors { field message }
+          }
+        }
+      variables:
+        ownerId: "{{ shop.id }}"
+        val: "{{ pages.edges[0].node.id }}"
+  # Step 3: Fetch the About page content from metaobject type 'about_page'
+  - get_metaobject_entries:
+      type: "about_page"
+      limit: 1
+  # Step 4: Update the About page with new content
+  - send_admin_api_request:
+      query: |
+        mutation UpdateAbout($id: ID!, $title: String!, $body: String!, $seoTitle: String!, $seoDesc: String!) {
+          pageUpdate(id: $id, page: {
+            title: $title,
+            body: $body,
+            seo: { title: $seoTitle, description: $seoDesc }
+          }) {
+            page { id title handle seo { title description } }
+            userErrors { field message }
+          }
+        }
+      variables:
+        id: "{{ pages.edges[0].node.id }}"
+        title: "{{ entries[0].title }}"
+        body: "{{ entries[0].body_html }}"
+        seoTitle: "{{ entries[0].seo_title }}"
+        seoDesc: "{{ entries[0].seo_description }}"
