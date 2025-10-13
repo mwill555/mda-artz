@@ -117,3 +117,108 @@ When working on marketing content or growth strategies:
 - Runs on push to main and all pull requests
 - Checks for banned words and validates JSON schema
 - Node.js version: 18
+
+## Build & Test Instructions
+
+### Building the Project
+This is a content-focused repository without traditional build steps. TypeScript files in `apps/generators/` are executed directly with `ts-node` or compiled on-the-fly.
+
+### Running Generators
+```bash
+# Run the SEO and Pinterest CSV generator
+npx ts-node apps/generators/mdz-seo-pins.ts <input-products.json>
+
+# This will create:
+# - build/seo/{handle}.json files
+# - build/pins/pins.csv file
+```
+
+### Testing
+- Manual validation of generated SEO JSON files against schema
+- Content validation for banned words using grep
+- GitHub Actions workflow runs automated validation on PRs
+
+### Validation Commands
+```bash
+# Validate SEO JSON files (requires ajv-cli)
+npx ajv validate -s schemas/seo.schema.json -d build/seo/*.json --strict=false
+
+# Check for banned words in generated content
+grep -r -E '\b(pink|rainbow)\b' build/seo
+```
+
+## Development Setup
+
+### Prerequisites
+- Node.js 18 or higher
+- TypeScript knowledge for generator scripts
+- Basic understanding of Shopify store structure
+
+### Getting Started
+1. Clone the repository
+2. No npm install needed for basic content updates
+3. For running generators, install TypeScript globally: `npm install -g typescript ts-node`
+4. For validation, install ajv-cli: `npm install -g ajv-cli`
+
+### Repository Structure
+- `apps/generators/` - TypeScript scripts for generating SEO and marketing content
+- `apps/flows/` - YAML workflow definitions for automation
+- `prompts/` - AI prompt templates for content generation
+- `build/seo/` - Generated SEO JSON files (created by generators)
+- `build/pins/` - Generated Pinterest CSV files (created by generators)
+- `.github/workflows/` - GitHub Actions workflow definitions
+
+## Dependencies & Tools
+
+### Runtime Dependencies
+- Node.js 18+ (for running TypeScript generators)
+- TypeScript/ts-node (for executing .ts files)
+
+### Development Tools
+- ajv-cli - JSON schema validation
+- TypeScript - For generator scripts
+- Markdown - For documentation and prompts
+
+### External Services
+- Shopify - E-commerce platform
+- Pinterest - Social media marketing
+- Meta/TikTok Ads - Paid advertising channels
+- Etsy - Additional marketplace
+
+## Common Commands
+
+### Content Generation
+```bash
+# Generate SEO and Pinterest content from product JSON
+npx ts-node apps/generators/mdz-seo-pins.ts products.json
+```
+
+### Content Validation
+```bash
+# Validate all SEO JSON files
+npx ajv validate -s schemas/seo.schema.json -d build/seo/*.json --strict=false
+
+# Check for banned color words
+grep -r -E '\b(pink|rainbow)\b' build/seo || echo "No banned words found"
+```
+
+### Git Workflow
+```bash
+# Check status and view changes
+git status
+git diff
+
+# Commit changes
+git add .
+git commit -m "Your commit message"
+git push
+```
+
+## Best Practices for Contributors
+
+- **Start with simple tasks**: Begin with documentation updates or single-file changes
+- **Clear commit messages**: Describe what changed and why
+- **Test before committing**: Always validate generated content before pushing
+- **Minimal changes**: Make the smallest possible changes to achieve the goal
+- **Follow existing patterns**: Match the code style and structure of existing files
+- **Document your work**: Update README.md if you add new features or change workflows
