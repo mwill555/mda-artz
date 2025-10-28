@@ -1,6 +1,7 @@
 # mda-artz
 Repository for the mda-artz project.
 
+**📋 [View Suggested Tasks](SUGGESTED_TASKS.md)** - A comprehensive checklist of actionable items to improve your store, organized by priority and category.
 
 ## Running Your Shopify Store Successfully
 
