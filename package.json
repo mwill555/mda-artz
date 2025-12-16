@@ -1,0 +1,17 @@
+{
+  "name": "mda-artz",
+  "version": "1.0.0",
+  "description": "M Digital Artz project repository",
+  "private": true,
+  "scripts": {
+    "generate:seo-pins": "ts-node apps/generators/mdz-seo-pins.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
